@@ -1,0 +1,21 @@
+body {
+  background-color: #effffd;
+}
+
+h3,h1 {
+  color: #66bfbf;
+}
+hr {
+  border-style: dotted none none;
+  border-color: gray;
+  border-width: 7px;
+  width: 10%;
+}
+.My_Photo {
+  height: 190px;
+  width: 187px;
+}
+
+button {
+  margin-top: 10px;
+}
