@@ -1,0 +1,134 @@
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: var(--soft-blue, white);
+    background-color: var(--very-dark-blue-main-BG);
+}
+
+.main-container h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.main-container p {
+    font-size: 1.1rem;
+}
+
+.icon-text-container p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.first-text p {
+    color: var(--cyan, inherit);
+}
+
+.creator-container p {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.main-img-container {
+    max-width: 300px;
+    position: relative;
+    align-self: center;
+}
+
+#main-img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    border-radius: 10px;
+}
+
+#hover-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 255, 247, 0.5);
+    transition: .5s ease;
+    opacity:0;
+    padding: 120px;
+    cursor: pointer;
+}
+
+.main-img-container:hover #hover-img {
+    opacity: 1;
+}
+
+.creator-container img {
+    max-width: 30px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 0.01rem solid var(--soft-blue);
+    opacity: 0.5;
+}
+
+/*! START OF LAYOUTS */
+
+.main-container {
+    max-width: 350px;
+    background-color: var(--very-dark-blue-card-BG);
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.icon-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-text, .second-text {
+    display: flex;
+    gap: 7px;
+}
+
+.creator-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

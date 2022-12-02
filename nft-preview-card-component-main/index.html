@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
+
   <title>Frontend Mentor | NFT preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  Equilibrium #3429
 
-  Our Equilibrium collection promotes balance and calm.
+  <div class="main-container">
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+    <div class="main-img-container">
+      <img id="main-img" src="images/image-equilibrium.jpg" alt="equilibrium">
+      <img id="hover-img" src="images/icon-view.svg" alt="view">
+    </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <h1><a href="#">Equilibrium #3429</a></h1>
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="icon-text-container">
+
+      <div class="first-text">
+        <img src="images/icon-ethereum.svg" alt="ethereum">
+        <p>0.041 ETH</p>
+      </div>
+
+      <div class="second-text">
+        <img src="images/icon-clock.svg" alt="clock">
+        <p>3 days left</p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="creator-container">
+      <img src="images/my.jpeg" alt="avatar">
+      <p>Creation of <a href="#">Akshraj Chavda</a></p>
+    </div>
+
   </div>
+
 </body>
+
 </html>
