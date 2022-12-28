@@ -1,17 +1,22 @@
-let Touch = document.getElementsByTagName("button");
-for (let i = 0; i < Touch.length; i++) {
-    Touch[i].addEventListener("click", function () {
-        sound(this.innerHTML);
-        animation(this.innerHTML);
+
+
+let touch = document.getElementsByTagName("button");
+for (let i = 0; i < touch.length; i++) {
+    touch[i].addEventListener("click", function () {
+        let word = this.innerHTML;
+        sound(word);
+        animation(word);
     })
 }
 
-let press = document.addEventListener("keypress", function (event) {
+document.addEventListener("keypress", function (event) {
     sound(event.key);
     animation(event.key);
-})
+});
+
 
 function sound(word) {
+
     switch (word) {
         case "w": {
             var audio = new Audio("sounds/crash.mp3");
@@ -49,15 +54,16 @@ function sound(word) {
             break;
         }
         default: {
+
         }
     }
+
 }
 
 
 function animation(word) {
     var pressedButton = document.querySelector("." + word);
     pressedButton.classList.add("pressed");
-
 
     setTimeout(function () {
         pressedButton.classList.remove("pressed");

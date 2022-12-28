@@ -1,15 +1,25 @@
-let count = document.querySelector("span");
-let change = document.getElementsByClassName("count");
-let c = 0;
+let count = 0;
 for (let i = 0; i < 3; i++) {
-    change[i].onclick = function () {
-        if (i == 0) {
-            c++;
-        } if (i == 1) {
-            c--;
-        } if (i == 2) {
-            c = 0;
-        }
-        count.innerHTML = c;
+    document.getElementsByClassName("count")[i].onclick = function () {
+        Make_change(this.innerHTML)
     }
+}
+
+document.addEventListener("keypress", function (event) {
+    Make_change(event.key)
+})
+function Make_change(word) {
+    switch (word) {
+        case "+":
+            count++;
+            break;
+        case "-":
+            count--;
+            break;
+
+        default:
+            count = 0
+            break;
+    }
+    document.querySelector("span").innerHTML = count;
 }
