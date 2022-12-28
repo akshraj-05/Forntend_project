@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dice game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.KJiFFIKza19ZZqyMDqAcMAHaHY?w=206&h=206&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <h1 class="Heading">Dice Game</h1>
+    <%let rand=Math.floor(6 * Math.random())+1;%>
+        <%let rand1=Math.floor(6 * Math.random())+1;console.log(rand,rand1); %>
+            <% if (rand===rand1) { %>
+                <h1 class="result">The Match is draw</h1>
+
+                <% }else { %>
+
+                    <h1 class="result">And The Winner Is <%= rand < rand1 ? "Player2" : "Player1" %>
+                    </h1>
+                    <%}%>
+                        <div class="dice">
+                            <img src="./Images/dice<%=rand %>.png " alt="Player1">
+                            <img src="./Images/dice<%=rand1 %>.png " alt="Player2">
+
+
+                        </div>
+                        <div class="bu">
+                        <button class="Final" type="submit" onClick="window.location.reload();">play again</button>
+                        </div>
+
+
+</body>
+
+</html>
