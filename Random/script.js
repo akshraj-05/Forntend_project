@@ -1,5 +1,6 @@
 let bg = document.getElementsByTagName("body");
 let btn = document.getElementsByClassName("bubble");
+let bubbles = document.getElementsByClassName("bubbl");
 
 btn[0].addEventListener("click", function () {
     change();
@@ -26,6 +27,7 @@ function change() {
         currentSong = new Audio(songList[randomIndex]);
         currentSong.play();
         buttonEnabled = false;
+      //  contentChange(songList[randomIndex].slice(8, -4));
         setTimeout(function () {
             buttonEnabled = true;
         }, 20000);
@@ -40,7 +42,12 @@ function getRandomColor() {
     }
     return color;
 }
-
+// function contentChange(tex) {
+//     for (let index = 0; index < bubbles.length; index++) {
+//         bubbles[index].style.setProperty('content', tex,"important");
+//         console.log(bubbles[index].style.getPropertyValue('content'));
+//     }
+// }
 
 
 
