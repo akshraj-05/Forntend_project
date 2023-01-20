@@ -27,7 +27,7 @@ function change() {
         currentSong = new Audio(songList[randomIndex]);
         currentSong.play();
         buttonEnabled = false;
-      //  contentChange(songList[randomIndex].slice(8, -4));
+        //  contentChange(songList[randomIndex].slice(8, -4));
         setTimeout(function () {
             buttonEnabled = true;
         }, 20000);
